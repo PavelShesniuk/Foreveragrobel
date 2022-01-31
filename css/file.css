@@ -661,6 +661,7 @@ a.onPagePos {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    text-align: center;
 }
 
 .contentInf p {
@@ -1338,12 +1339,16 @@ div.hybrid:last-child {
         display: none;
     }
 
+    /* .contentInf li {
+        padding: 10px 10px 10px 20px;
+    } */
+
     .contentInf ul {
-        padding: 10px;
+        padding: 10px 10px 10px 35px;
     }
 
     .contentInf ol {
-        padding: 10px;
+        padding: 10px 10px 10px 35px;
     }
 
     .contentInf  {
@@ -1402,7 +1407,15 @@ div.hybrid:last-child {
     }
 
     .header .socialNetwork div {
-    width: 35%;
+    width: 20%;
     margin-left: auto;
     margin-right: auto;
+    }
+
+    .Content h2 {
+        text-align: center;
+    }
+    
+    .contacts h2 {
+        text-align: center;
     }
