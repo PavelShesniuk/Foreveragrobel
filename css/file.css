@@ -1400,3 +1400,9 @@ div.hybrid:last-child {
     .areaMob .areaMobUnit ul span {
         font-weight: normal;
     }
+
+    .header .socialNetwork div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    }
