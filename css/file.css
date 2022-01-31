@@ -1,0 +1,1402 @@
+html {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+a {
+    font-size: 18px;
+}
+
+p,
+h1,
+h2,
+h3 {
+    line-height: 175%;
+    word-spacing: 10px;
+    text-indent: 20px;
+}
+
+
+
+ul,
+li {
+    line-height: 175%;
+    word-spacing: 10px;
+}
+
+img {
+    border-radius: 8px;
+}
+
+/* шапка */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    flex-wrap: wrap;
+}
+
+.header div {
+    /* display: flex; */
+    justify-content: ;
+    margin: 15px 20px;
+}
+
+.header a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+.header .socialNetwork div {
+    padding: 7px;
+    border: 2px whitesmoke solid;
+    border-radius: 18px;
+}
+
+.header .socialNetwork div:hover {
+    border: 2px #ebca65 solid;
+    cursor: pointer;
+    animation: socialNetworkBorder 0.7s;
+}
+
+.header .socialNetwork div:hover img {
+
+    animation: imagaes 0.2s infinite;
+}
+
+@keyframes socialNetworkBorder {
+    from {
+        border-color: whitesmoke;
+    }
+
+    to {
+        border-color: #ebca65;
+    }
+}
+
+.header a:hover {
+    color: #ebca65;
+    animation: MyAnimation1 0.7s;
+}
+
+@keyframes MyAnimation1 {
+    from {
+        color: whitesmoke;
+    }
+
+    to {
+        color: #ebca65;
+    }
+}
+
+.header img {
+    width: 25px;
+    vertical-align: middle;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+@keyframes imagaes {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(4deg)
+    }
+
+    20% {
+        transform: rotate(8deg)
+    }
+
+    30% {
+        transform: rotate(12deg)
+    }
+
+    40% {
+        transform: rotate(8deg)
+    }
+
+    50% {
+        transform: rotate(4deg)
+    }
+
+    60% {
+        transform: rotate(0deg)
+    }
+
+    70% {
+        transform: rotate(-4deg)
+    }
+
+    80% {
+        transform: rotate(-8deg)
+    }
+
+    90% {
+        transform: rotate(-12deg)
+    }
+}
+
+.mailHeader:hover img,
+.phoneHeader:hover img {
+    animation: imagaes 0.2s infinite;
+}
+
+.socialNetwork a:hover img {
+    animation: imagaes 0.2s infinite;
+}
+
+.socialNetwork {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.socialNetwork div {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.menu {
+    background-size: cover;
+    background: #242424;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* ССЫЛКИ МЕНЮ header */
+.menuContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px 5px 10px;
+}
+
+.logo span {
+    font-size: 16px;
+    color: #ebca65;
+}
+
+.menuContent .logo h1 {
+    margin: 0;
+    /* padding: 20px; */
+    color: #ebca65;
+    font-size: 27px;
+    padding: 20px 10px 5px 0p
+}
+
+.menu .menuContent a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menuPages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menuPages a {
+    font-weight: 300;
+    /* margin-bottom: 40px;
+    margin-top: 40px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px;
+}
+
+/* .menuPages a img {
+    width: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+    visibility: hidden;
+} */
+
+/* .menuPages a:hover img {
+    visibility: visible;
+} */
+
+.menuPages a span,
+.menuPages a div.menu-item {
+    /* font-weight: 400; */
+    border-bottom: solid 5px transparent;
+}
+
+.menuPages a:hover span,
+.menuPages a:hover div.menu-item {
+    /* font-weight: 400; */
+    border-bottom: solid 5px #ebca65;
+    animation: MyAnimation7 0.6s;
+}
+
+@keyframes MyAnimation7 {
+    from {
+        border-bottom: solid 5px transparent;
+    }
+
+    to {
+        border-bottom: solid 5px #ebca65;
+    }
+}
+
+/* Выплывающее меню */
+
+.menu-item a {
+    position: relative;
+    display: inline-block;
+    vertical-align: super;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: #242424;
+    border: solid 1px #ebca65;
+}
+
+.menu-item:hover a span {
+    border-bottom: solid 5px #ebca65;
+}
+
+.menu-item:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-item .submenu a {
+    margin: 10px;
+}
+
+.menu-item .submenu a:hover {
+    color: #ebca65;
+    animation: MyAnimation1 0.5s;
+}
+
+
+.menu-item .submenu a span {
+    font-style: italic;
+    color: red;
+    border-bottom: none;
+    animation: none;
+}
+
+/* НА СТРАНИЦЕ */
+.menu .menuPages .onPage span {
+    font-weight: 400;
+    border-bottom: solid 5px #ebca65;
+}
+
+/* .menuPages .onPage img {
+    visibility: visible;
+} */
+
+.menu ul li .onPageUl {
+    border-bottom: 5px solid #4a8b71;
+}
+
+.menu ul li .onPageUl img {
+    visibility: visible;
+}
+
+/* Контент */
+.Content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200px;
+    align-items: center;
+}
+
+.buttonBlock {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 550px;
+    margin: 0;
+    background-image: url("../images/Фон копия.png");
+    background-size: cover;
+}
+
+.buttonBlock span {
+    color: whitesmoke;
+    font-style: italic;
+    font-size: 40px;
+    margin-bottom: 55px;
+    font-weight: 800;
+}
+
+.Content div {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+    width: 80%;
+
+}
+
+.Content div:nth-of-type(1) {
+    margin-top: 45px;
+    justify-content: center;
+}
+
+.Content div p {
+    text-align: justify;
+    margin-top: 0;
+}
+
+
+.Content h2 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.Content h3 {
+    font-size: 28px;
+    margin-left: 15px;
+}
+
+.Content div img {
+    margin: 20px;
+    width: 30%;
+}
+
+.Content div div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+}
+
+.Content div div p {
+    text-indent: 0;
+}
+
+/* Контент "О компании" */
+
+.ContentCompany {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    align-items: center;
+}
+
+.ContentCompany h1 {
+    margin: 30px 0;
+}
+
+.ContentCompany p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.ContentCompany div {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.ContentCompany div:nth-of-type(odd) img {
+    width: 420px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.ContentCompany div:nth-of-type(even) img {
+    width: 420px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.ContentCompany div:last-of-type p,
+.ContentCompany ul {
+    font-weight: bold;
+}
+
+.ContentCompany ul,
+.ContentCompany li {
+    margin: 10px;
+}
+
+.ContentCompany li {
+    font-weight: normal;
+}
+
+/* Контент кукуруза */
+
+/* Позиции каталога */
+.positons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+}
+
+.positons a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.positons a:hover {
+    animation: MyAnimation1 0.4s;
+    color: #ebca65;
+}
+
+.positons a span {
+    color: red;
+    font-style: oblique;
+    display: none;
+}
+
+a.onPagePos {
+    color: #ebca65;
+    border-bottom: solid #ebca65;
+}
+
+/* Кукуруза */
+
+.catalogKont {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.catalogKont h1,
+.catalogKont h2 {
+    color: #1d8e44;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.catalogKont h2 {
+    margin-bottom: 50px;
+}
+
+.catalogKont .CotalogKontText {
+    text-align: justify;
+    margin-top: 30px;
+}
+
+
+.catalogKont p {
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 0;
+}
+
+.catalogKont p span:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.catalogKont p span:last-child {
+    text-transform: none;
+}
+
+.catalogKont div:last-child p span {
+    color: #4a8b71;
+}
+
+.catalogKont ul {
+    color: #ebca65;
+    font-size: 18px;
+}
+
+.catalogKont ul li {
+    margin: 10px 0;
+}
+
+.catalogKont ul span {
+    color: black;
+}
+
+.catalogKont div:nth-of-type(odd) img {
+    width: 40%;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='220-1.jpg'] {
+    width: 24%;
+    max-width: 320px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='220-2.jpg'] {
+    width: 28%;
+    max-width: 320px;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='221-2.jpg'] {
+    width: 30%;
+    max-width: 300px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='221-1.jpg'] {
+    width: 26%;
+    max-width: 250px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='Porum-230-2.jpg'] {
+    width: 25%;
+    max-width: 350px;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='Porum-230-1.jpg'] {
+    width: 30%;
+    max-width: 300px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='Porum-243-2.jpg'] {
+    width: 55%;
+    max-width: 550px;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='Bemo-172-CB-1.jpg'] {
+    width: 55%;
+    max-width: 650px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='Bemo-172-CB-2.jpg'] {
+    width: 25%;
+    max-width: 400px;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='Bemo-203-1.jpg'] {
+    width: 35%;
+    max-width: 380px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='Bemo-203-2.jpg'] {
+    width: 25%;
+}
+
+.catalogKont div:nth-of-type(odd) img[src*='Bemo-235-1.jpg'] {
+    width: 50%;
+    max-width: 600px;
+}
+
+.catalogKont div:nth-of-type(even) img[src*='Bemo-235-2.jpg'] {
+    width: 35%;
+}
+
+
+.catalogKont div:nth-of-type(even) img {
+    width: 40%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Полезная информация */
+
+.contentInf {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-bottom: 70px;
+    font-size: 20px;
+}
+
+.contentInf img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.contentInf h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.contentInf p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.contentInf p {
+    text-align: justify;
+    margin: 40px 0;
+}
+div.contentInf p:last-child {
+margin-bottom: 50px;
+}
+
+.contentInf p span {
+    font-weight: bold;
+}
+
+.contentInf ul {
+    color: #ebca65;
+    list-style-type: disc;
+}
+
+.contentInf ul li span {
+    color: black;
+    font-weight: normal;
+}
+
+.contentInf li {
+    margin: 20px 0;
+}
+
+.contentInf:nth-child(even) ol li {
+    font-weight: bold;
+}
+
+/* Контакты */
+
+.contacts {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px 0;
+
+}
+
+.contacts a {
+    text-decoration: none;
+    color:#4a8b71;
+}
+.contacts a:hover {
+    color:#ebca65;
+    animation: hoverContacts 0.9s;
+}
+
+@keyframes hoverContacts {
+    from {
+        color:#4a8b71;
+    }
+    to {
+        color:#ebca65;
+    }
+}
+
+.contacts h1,
+.contacts h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contacts h2 {
+    margin-bottom: 40px;
+}
+
+.contacts .location {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.contacts .location span {
+    margin: 15px 0;
+}
+
+.PhoneContacts {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.peoplesPhones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.peoplesPhones div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 25px 0;
+}
+
+.peoplesPhones div:first-child span {
+    margin: 3px 0;
+}
+.peoplesPhones div:first-child span:last-child {
+    margin: 15px 0;
+}
+
+.peoplesPhones div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 0;
+    align-items: center;
+}
+
+.peoplesPhones div:last-child a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Районированность сортов */
+
+.area {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.area h1 {
+    margin-bottom: 50px;
+}
+
+.area table {
+    width: 100%;
+    font-size: 18px;
+    border: #242424 solid 2px;
+    border-collapse: collapse;
+}
+
+table th {
+    border: #242424 solid 2px;
+    padding: 10px;
+}
+
+table td {
+    border: #242424 solid 2px;
+    padding: 10px;
+}
+
+.area table tr {
+    border: #242424 solid 2px;
+}
+
+.area a {
+    color: #4a8b71;
+    text-decoration: none;
+}
+
+.area a:hover {
+    color: #ebca65;
+    animation: hoverContacts 0.5s;
+}
+
+.areaMob {
+    display: none;
+
+}
+
+/* Каталог */
+
+.Catalog {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+.hybrid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hybrid h3 {
+    width: 30%;
+}
+.hybrid h4 {
+    width: 50%;
+}
+
+.hybrid img {
+    width: 5%;
+    opacity: 0.5;
+    margin: 20px;
+}
+
+.hybrid a:hover img {
+    opacity: 1;
+    animation: hybridImg 0.9s;
+}
+
+
+.hybrid  a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px transparent solid;
+    margin: 20px 0;
+    background-color: rgba(74,139,113,0.4);
+    border-radius: 25px;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(36,36,36,0.7);
+}
+
+div.hybrid:last-child {
+    margin-bottom: 80px;
+}
+
+.hybrid a:hover {
+    background-color: rgba(235,202,101,0.7);
+    color: rgba(36,36,36,1);
+    animation: hybrid 0.9s;
+}
+
+@keyframes hybrid {
+    from {
+        background-color: rgba(74,139,113,0.4);
+        color: rgba(36,36,36,0.7);
+    }
+    to {
+        background-color: rgba(235,202,101,0.7);
+        color: rgba(36,36,36,1);
+    }
+}
+
+@keyframes hybridImg {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.hybrid div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #242424;
+}
+
+.hybrid a  {
+    text-decoration: none;
+    /* color: #242424; */
+}
+
+/* подвал */
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #242424;
+    color: whitesmoke;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.Blue img[src*='Corn'] {
+    width: 18%;
+}
+
+@keyframes spanFooter {
+    0% {
+        margin-right: 7px;
+        margin-left: 0px;
+    }
+
+    20% {
+        margin-right: 6.5px;
+        margin-left: 0.5px;
+    }
+
+    40% {
+        margin-right: 6px;
+        margin-left: 1px;
+    }
+
+    60% {
+        margin-right: 5.5px;
+        margin-left: 1.5px;
+    }
+
+    80% {
+        margin-right: 5px;
+        margin-left: 2px;
+    }
+
+    100% {
+        margin-right: 4.5px;
+        margin-left: 2.5px;
+    }
+}
+
+.menuFooter {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+}
+
+.menuFooter h3 {
+    color: whitesmoke;
+}
+
+.menuFooter a {
+    color: whitesmoke;
+    margin: 10px 10px;
+    text-decoration: none;
+}
+
+.menuFooter a:hover {
+    color: #ebca65;
+    animation: MyAnimation1 0.7s;
+}
+
+.menuFooter a:hover span:first-child {
+    animation: spanFooter 0.5s;
+    margin-right: 4.5px;
+    margin-left: 2.5px;
+}
+
+.menuFooter a span:first-child {
+    color: #ebca65;
+    margin-right: 7px;
+}
+
+.menuFooter a span:last-child {
+    margin-left: 5px;
+}
+
+.menuContacts {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+}
+
+.menuContacts img {
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+.menuContacts a {
+    color: whitesmoke;
+    margin: 10px 10px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menuContacts a:hover {
+    color: #ebca65;
+    animation: MyAnimation1 0.7s;
+}
+
+.menuContacts div:hover img {
+    animation: imagaes 0.2s infinite;
+}
+
+.menuContacts div {
+    /* margin-top: 10px; */
+    margin-bottom: 35px;
+}
+
+.menuContacts div h4 {
+    margin: 5px;
+    color: #ebca65;
+}
+
+.juridical {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.juridical span {
+    margin: 10px 10px;
+
+}
+
+.Red,
+.Yellow,
+.Blue {
+    background-color: #242424;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 7px 0;
+}
+
+.Red {
+    border-bottom: solid 10px red;
+}
+
+.Yellow {
+    border-bottom: solid 10px yellow;
+}
+
+.Blue {
+    border-bottom: solid 10px blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Адаптивка */
+@media all and (max-width: 640px) {
+
+    p {
+        text-indent: 0;
+    }
+    .header {
+        font-size: 27px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header div {
+        text-align: center;
+    }
+
+    .mailHeader,
+    .phoneHeader,
+    .socialNetwork {
+        width: 90%;
+    }
+
+    .mailHeader img,
+    .phoneHeader img {
+        display: none;
+    }
+
+    .socialNetwork a:hover img {
+        animation: none;
+    }
+
+    .header .socialNetwork span {
+        display: none;
+    }
+
+    .socialNetwork img {
+        width: 33%;
+
+    }
+
+    /* МЕНЮ!!! */
+
+    .menuContent,
+    .menuPages {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5px;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .menuPages a {
+        margin: 0;
+    }
+
+    .menuPages a span,
+    .menuPages a div.menu-item {
+        margin: 15px;
+    }
+
+    /* .menuPages .onPage img {
+        display: none;
+    } */
+
+    /* .menuContent h1 {
+        display: none;
+    }  */
+
+    .Content {
+        width: 100%;
+    }
+
+    .Content .buttonBlock {
+        display: none;
+    }
+
+
+    .Content div {
+        width: 90%;
+        margin: 10px;
+
+    }
+
+    .Content div p {
+        width: 100%;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .Content div img {
+        display: none;
+    }
+
+    .Content div div {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .Content div div p,
+    .Content h3 {
+        /* text-indent: 20px;
+        width: 90%;
+        font-size: 17px;
+        font-weight: bold; */
+        display: none;
+    }
+
+    /* Контент "О компании" */
+
+    .ContentCompany div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ContentCompany div:nth-of-type(odd) img,
+    .ContentCompany div:nth-of-type(even) img {
+        width: 80%;
+        float: none;
+        margin: 5px;
+    }
+
+    /* Контент каталога */
+
+    .positons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalogKont div.CotalogKontText img {
+        float: none;
+        width: 100%;
+        margin: 10px;
+    }
+
+
+    /* ПОДВАЛ */
+    .Blue {
+        flex-direction: column;
+    }
+
+    .Blue img {
+        display: none;
+    }
+
+    .juridical {
+        flex-direction: column;
+    }
+
+    .juridical span {
+        margin: 2px;
+    }
+
+    /* Каталог */
+    .positons {
+        top: auto;
+    }
+
+    .CotalogKontText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalogKont .CotalogKontText img[src*='.jpg'] {
+        margin: 20px;
+    }
+
+    /* Картинки каталога */
+    .catalogKont div:nth-of-type(odd) img[src*='220-1.jpg'] {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .catalogKont div:nth-of-type(even) img[src*='220-2.jpg'] {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .catalogKont div:nth-of-type(odd) img[src*='221-2.jpg'] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .catalogKont div:nth-of-type(even) img[src*='221-1.jpg'] {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .catalogKont div:nth-of-type(even) img[src*='Porum-230-2.jpg'] {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .catalogKont div:nth-of-type(odd) img[src*='Porum-230-1.jpg'] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .catalogKont div:nth-of-type(even) img[src*='Porum-243-2.jpg'] {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .catalogKont div:nth-of-type(odd) img[src*='Bemo-172-CB-1.jpg'] {
+        width: 100%;
+        max-width: 650px;
+    }
+    
+    .catalogKont div:nth-of-type(even) img[src*='Bemo-172-CB-2.jpg'] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .catalogKont div:nth-of-type(odd) img[src*='Bemo-203-1.jpg'] {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .catalogKont div:nth-of-type(even) img[src*='Bemo-203-2.jpg'] {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .catalogKont div:nth-of-type(odd) img[src*='Bemo-235-1.jpg'] {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .catalogKont div:nth-of-type(even) img[src*='Bemo-235-2.jpg'] {
+        width: 100%;
+    }
+
+    .contentInf {
+        width: 95%;
+    }
+    .contentInf img {
+        display: none;
+    }
+
+    .contentInf ul {
+        padding: 10px;
+    }
+
+    .contentInf ol {
+        padding: 10px;
+    }
+
+    .contentInf  {
+        text-align: justify;
+    }
+
+    .hybrid a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hybrid h3,
+    .hybrid h4 {
+        width: 90%;
+    }
+
+    .hybrid a img {
+        display: none;
+    }
+
+    .area table {
+        display: none;
+    }
+
+    .area h1 {
+        text-indent: 0;
+    }
+
+    .areaMob {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-indent: 0;
+        font-size: 20px;
+    }
+
+    .areaMob a {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .areaMob .areaMobUnit ul {
+        font-weight: bold;
+        list-style-type: none;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+    .areaMob .areaMobUnit ul span {
+        font-weight: normal;
+    }
